@@ -152,10 +152,10 @@ Finally, Upload your test CSV and explore the results.
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 ### Live App Link
-(Insert your Streamlit deployment link here)
+https://earthquaketsunamimlmodelstanvee.streamlit.app/
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 ### GitHub Repository
-(Insert your GitHub repo link here)
+https://github.com/Tan0109/Earthquake_Tsunami_ML_Models
