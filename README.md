@@ -87,12 +87,12 @@ Each model was evaluated using the following metrics:
 
 | ML Model Name        | Observation |
 |----------------------|-------------|
-| Logistic Regression  | ... |
-| Decision Tree        | ... |
-| K-Nearest Neighbors  | ... |
-| Naive Bayes (Gaussian) | ... |
-| Random Forest (Ensemble) | ... |
-| XGBoost (Ensemble)   | ... |
+| Logistic Regression  | Shows steady, reliable performance with good AUC and F1 scores, but it struggles to capture complex non‑linear relationships in the data. Performs well but is clearly outperformed by tree‑based and ensemble models. |
+| Decision Tree        | Performs well with strong accuracy and MCC, but slightly lower AUC than the ensembles indicates some overfitting. It captures non‑linear patterns better than logistic regression but is less stable than Random Forest and XGBoost. |
+| K-Nearest Neighbors  | Good balance between precision and recall with high AUC. kNN does well after scaling, but performance is limited in comparison with tree ensembles because it is sensitive to local variations and distance metrics. |
+| Naive Bayes (Gaussian) | Lowest performance among all models, mainly because its assumptions (feature independence + Gaussian distribution) don't hold well for this dataset. Still gives a decent baseline but misses complex feature interactions. |
+| Random Forest (Ensemble) | Strong overall performance with very high scores across all metrics. It generalizes well and handles non‑linear patterns effectively. Nearly top‑tier, only slightly behind XGBoost. |
+| XGBoost (Ensemble)   | Best performing model across almost all metrics. Achieves highest accuracy, F1, and MCC, and perfect recall, indicating it can capture all tsunami‑positive cases. Shows excellent generalization with minimal overfitting. |
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
