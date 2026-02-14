@@ -26,7 +26,7 @@ from sklearn.metrics import (
 )
 
 # ---- Config ----
-DATA_PATH = "../data/earthquake_data_tsunami.csv"   # change if needed
+DATA_PATH = "./data/earthquake_data_tsunami.csv"   # change if needed
 TARGET_COL = "tsunami"
 MODEL_DIR = Path("../model")
 MODEL_DIR.mkdir(exist_ok=True)
@@ -55,6 +55,12 @@ def main():
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.1, random_state=42, stratify=y
     )
+
+    # Save combined test set with ground truth
+    test_full = X_test.copy()
+    test_full["tsunami"] = y_test.values
+    test_full.to_csv("test/test.csv", index=False)
+ 
 
     # Define models
     models = {
